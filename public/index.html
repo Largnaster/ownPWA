@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
 
     <!-- Manifest -->
@@ -19,45 +19,71 @@
     <div class="container">
       <h1>My first PWA</h1>
 
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accordion Item #2
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
+      <div>
+        <button class="btn btn-primary" id="btn-api">Test</button>
+        <button class="btn btn-secondary" id="btnInstall" hidden>Instalar</button>
       </div>
+      <div class="mt-2" id="api-content"></div>
     </div>
+
+    <div class="mt-4">
+      <footer class="bg-light text-center text-lg-start">
+        <!-- Grid -->
+        <div class="container p-4">
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">My PWA</h5>
+              <p>
+                Esta página está desarrollada como una progressive web application para
+                la asignatura de Nuevas Tecnologías de Desarrollo. Incorpora un API que permite
+                realizar búsquedas relacionadas con anime. No se espera que sea algo fuera
+                de lo académico, así que no hay que preocuparse por asuntos legales de momento.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Recursos</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="https://mdbootstrap.com/docs/standard/navigation/footer/" class="text-dark">Footer</a>
+                </li>
+                <li>
+                  <a href="https://anilist.gitbook.io/anilist-apiv2-docs/" class="text-dark">Anilist API</a>
+                </li>
+                <li>
+                  <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" class="text-dark">Bootstrap</a>
+                </li>
+                <li>
+                  <a href="https://web.dev/progressive-web-apps/" class="text-dark">Google PWA's</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+        </div>
+        <!-- Grid -->
+
+        <!-- Copy -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          Aplicación no comercial
+        </div>
+        <!-- Copy -->
+      </footer>
+    </div>
+
+    <!-- Manejo de peticiones a la API -->
+    <script src="./js/api-handler.js"></script>
+
+    <!-- Instalador de la pwa -->
+    <script src="./js/install.js"></script>
 
     <!-- Registering the service worker -->
     <script>
