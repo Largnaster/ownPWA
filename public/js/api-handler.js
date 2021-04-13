@@ -24,7 +24,7 @@ var query = `
 `;
 
 var variables = {
-  id: 15125,
+  id: 113415,
 };
 // La url a la que se hara el request con las opciones
 var url = "https://graphql.anilist.co",
@@ -53,12 +53,12 @@ function handleResponse(response) {
 function handleData(data){
   media = data.data.Media
   contField.innerHTML = `
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 14rem;">
       <img src="${media.coverImage.large}" style="width: 100%; height: auto;" />
       <div class="card-body">
         <h5 class="card-title">${media.title.romaji}[${media.title.native}]</h5>
         <h6 class="card-subtitle mb-2 text-muted">ID: ${media.id}</h6>
-        <p class="card-text">${media.description}</p>
+        <p class="card-text">${media.description.slice(0,115)}...</p>
       </div>
     </div>
   `
